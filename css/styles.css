@@ -168,6 +168,33 @@ body {
     color: var(--accent-color);
 }
 
+/*Иконки в хедере*/
+.auth-nav .link::before {
+    content: "     ";
+    background-image: url(../images/symbol-defs.svg#envelope);
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    fill: #757575;
+}
+
+.auth-nav .mail-icon {
+    width: 10px;
+    height: 16px;
+    
+}
+
+.auth-nav .tel-icon {
+    width: 16px;
+    height: 12px;
+    background-image: url(../images/symbol-defs.svg#smartphone);
+}
+
+.auth-nav:hover::before,
+.auth-nav:focus::before {
+    fill: var(--accent-color);
+}
+
 /*Main*/
 /*Баннер*/
 .hero {
@@ -180,8 +207,7 @@ body {
     min-height: 600px;
     margin-left: auto;
     margin-right: auto;
-    background-color: rgba(47, 48, 58, 0.4);
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2), #C4C4C4),
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
 url(../images/hero.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -251,16 +277,27 @@ url(../images/hero.jpg);
     padding-bottom: 94px;
 }
 
-.features-list {
+.features-list ul {
+    width: 100%;
     display: flex;
     margin-right: -30px;
     padding: 0;
 }
 
 .feature-item {
-    max-width: 270px;
+    min-width: 270px;
     flex-basis: calc((100% / 4) - 30px);
     margin-right: 30px;
+}
+
+.feature-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin-bottom: 55px;
+    background-color: var(--button-color);
+    border-radius: 4px;
 }
 
 .list-title {
@@ -357,21 +394,6 @@ url(../images/hero.jpg);
     justify-content: center;
 }
 
-.circle {
-    background-color: tomato;
-    min-width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.circle:hover,
-.circle:focus {
-    background-color: var(--accent-color);
-}
-
 .team-social-item + .team-social-item {
     margin-left: 10px;
 }
@@ -387,10 +409,60 @@ url(../images/hero.jpg);
 .team-social-icon {
     fill: #AFB1B8;
 }
+.circle {
+    background-color: var(--primary-white-color);
+    min-width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-.team-social-icon:hover,
-.team-social-icon:focus {
+.circle:hover,
+.circle:focus {
+    background-color: var(--accent-color);
+}
+
+.circle:hover .team-social-icon,
+.circle:focus .team-social-icon {
     fill: var(--primary-white-color);
+}
+
+/*Постоянные клиенты*/
+.clients-container {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.clients-list ul {
+    width: 100%;
+    display: flex;
+    margin-right: -30px;
+    padding: 0;
+}
+
+.client-thumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: calc((100% / 6) - 30px);
+    min-width: 170px;
+    height: 92px;
+    margin-right: 30px;
+    box-sizing: border-box;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+}
+
+.client-thumb:hover .client-icon,
+.client-thumb:focus .client-icon {
+    fill: var(--accent-color);
+}
+
+.client-thumb:hover,
+.client-thumb:focus {
+    border: 1px solid var(--accent-color);
 }
 
 /*Подвал*/
