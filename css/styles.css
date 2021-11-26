@@ -401,16 +401,17 @@ url(../images/hero.jpg);
 /*Иконки соцсетей в футере*/
 
 .footer-social-contacts .circle {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(58, 16, 16, 0.1);
 }
 .footer-social-contacts .social-icon {
     fill: var(--primary-white-color);
 }
 
 /*Иконки при наведении*/
-.circle:hover,
-.circle:focus {
+.social-link:hover,
+.social-link:focus {
     background-color: var(--accent-color);
+    
 }
 
 .circle:hover .social-icon,
@@ -566,7 +567,6 @@ margin-bottom: 20px;
 }
 
 .portfolio-button {
-    margin-right: 8px;
     padding: 6px 22px;
     font-family: inherit;
     font-style: normal;
@@ -580,7 +580,11 @@ margin-bottom: 20px;
     border-radius: 4px;
 }
 
-.portfolio-button:last-child {
+.button-item {
+    margin-right: 8px;
+}
+
+.button-item:last-child {
     margin-right: 0;
 }
 
